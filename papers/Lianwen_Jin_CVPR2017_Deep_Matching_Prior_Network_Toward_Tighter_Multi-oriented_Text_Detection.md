@@ -1,8 +1,8 @@
-# Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection
+# Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets
 
 ## 作者    
 
-![1540457343150](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540457343150.png)
+![1540457343150](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540457343150.png)
 
 ## 关键词
 
@@ -28,21 +28,21 @@
 + 边界文字
 + 引入无关信息干扰
 
-![1540457949341](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540457949341.png)
+![1540457949341](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540457949341.png)
 
 ##### 有旋转角度的anchor
 
-![1540457992917](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540457992917.png)
+![1540457992917](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540457992917.png)
 
 Figure 2. Comparison between horizontal sliding window and quadrilateral sliding window. (a): Black bounding box represents ground truth; red represents our method. Blue represents horizontal sliding window. It can be visualized that quadrilateral window can easier recall text than rectangular window with higher overlapping area. (b): Horizontal sliding windows used in [19]. (c): Proposed quadrilateral sliding windows. Different quadrilateral sliding window can be distinguished with different color.    
 
 ##### 计算IOU的方式
 
-![1540458134659](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540458134659.png)
+![1540458134659](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540458134659.png)
 
 ##### 计算四边形四个顶点的顺序
 
-![1540458210152](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540458210152.png)
+![1540458210152](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540458210152.png)
 
 ##### 四个点的表示
 
@@ -50,17 +50,17 @@ Figure 2. Comparison between horizontal sliding window and quadrilateral sliding
 
 
 
-![1540458304435](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540458304435.png)
+![1540458304435](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540458304435.png)
 
-![1540458778436](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540458778436.png)
+![1540458778436](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540458778436.png)
 
-![1540458754535](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540458754535.png)
+![1540458754535](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540458754535.png)
 
 ## 实验结果
 
 - ICDAR15
 
-![1540459225995](Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection.assets/1540459225995.png)
+![1540459225995](Lianwen_Jin_CVPR2017_Deep_Matching_Prior_Network_Toward_Tighter_Multi-oriented_Text_Detection.assets.assets/1540459225995.png)
 
 ## 总结与收获
 

@@ -2,7 +2,7 @@
 
 ## 作者和代码    
 
-![1540620633585](Fangfang Wang_CVPR2018_Geometry-Aware Scene Text Detection With Instance Transformation Network.assets/1540620633585.png)
+![1540620633585](Fangfang_Wang_CVPR2018_Geometry-Aware_Scene_Text_Detection_With_Instance_Transformation_Network.assets/1540620633585.png)
 
 [caffe代码](https://github.com/zlmzju/itn)
 
@@ -16,7 +16,7 @@
 
 直观来看，就是下图中把方形的网格拉成这种覆盖文字目标的长条形网格（仿射变换）。
 
-![1540628298002](Fangfang Wang_CVPR2018_Geometry-Aware Scene Text Detection With Instance Transformation Network.assets/1540628298002.png)
+![1540628298002](Fangfang_Wang_CVPR2018_Geometry-Aware_Scene_Text_Detection_With_Instance_Transformation_Network.assets/1540628298002.png)
 
 ## 方法概述
 
@@ -34,19 +34,19 @@
 
 - MSRA-TD500
 
-![1540627855164](Fangfang Wang_CVPR2018_Geometry-Aware Scene Text Detection With Instance Transformation Network.assets/1540627855164.png)
+![1540627855164](Fangfang_Wang_CVPR2018_Geometry-Aware_Scene_Text_Detection_With_Instance_Transformation_Network.assets/1540627855164.png)
 
 Figure 4. Examples on MSRA-TD500. The first row shows detection results (yellow bounding-boxes) of the ITN. The second row shows the regular sampling grids (blue) and the adaptive sampling grids (red) on the feature maps (visualized as input images). For clarity, we draw two pairs of sampling grid examples on one image at most.    
 
-![1540627881410](Fangfang Wang_CVPR2018_Geometry-Aware Scene Text Detection With Instance Transformation Network.assets/1540627881410.png)
+![1540627881410](Fangfang_Wang_CVPR2018_Geometry-Aware_Scene_Text_Detection_With_Instance_Transformation_Network.assets/1540627881410.png)
 
 - ICDAR2015
 
-![1540627906463](Fangfang Wang_CVPR2018_Geometry-Aware Scene Text Detection With Instance Transformation Network.assets/1540627906463.png)
+![1540627906463](Fangfang_Wang_CVPR2018_Geometry-Aware_Scene_Text_Detection_With_Instance_Transformation_Network.assets/1540627906463.png)
 
 - 和不同可变性卷积网络对比
 
-![1540627985435](Fangfang Wang_CVPR2018_Geometry-Aware Scene Text Detection With Instance Transformation Network.assets/1540627985435.png)
+![1540627985435](Fangfang_Wang_CVPR2018_Geometry-Aware_Scene_Text_Detection_With_Instance_Transformation_Network.assets/1540627985435.png)
 
 Figure 6. Example of the learnt transformations. Transformed sampling grids (red) and corresponding regular sampling grids (blue) on feature maps (visualized as input images) of (a) ITN-general, (b) ITN w/o transformation regression and (c) ITN.
 
