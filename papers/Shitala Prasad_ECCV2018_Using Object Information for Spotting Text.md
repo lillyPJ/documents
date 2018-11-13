@@ -1,8 +1,8 @@
-# Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text
+# Shitala Prasad_ECCV2018】Using Object Information for Spotting Text
 
 ## 作者和代码    
 
-![1540615707463](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540615707463.png)
+![1540615707463](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540615707463.png)
 
 ## 关键词
 
@@ -32,7 +32,7 @@ TO-CNN采用Faster RCNN框架，网络结构： backbone（Object VGG-16 + Text 
 
   
 
-![1540616078610](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616078610.png)
+![1540616078610](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616078610.png)
 
 Fig. 3. The proposed TO-CNN for text spotting based on object information. (a) Illustrates the first training stage to extract object information and store in the Object CNN. (b) Illustrates the second training stage to tune the parameters in the Text CNN and the third training stage to fine tune the entire network for text spotting.
 
@@ -65,37 +65,37 @@ At the end of this training stage, the network is fully optimized for text spott
   + 22,767 images from ICDAR 2011 robust scene text, ICDAR 2015 incident scene text, KAIST scene text, MSRA-TD500, NEOCR11, SVT, USTBSV1k, and Traffic Sign datasets, together with images collected from the Internet and authors’ personal collections. 
   + 18,173 images are used for training and the rest 4,594 images are used for testing.    
 
-![1540616134760](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616134760.png)
+![1540616134760](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616134760.png)
 
-![1540616283994](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616283994.png)
+![1540616283994](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616283994.png)
 
 - MSRA-TD500
 
-![1540616560390](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616560390.png)
+![1540616560390](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616560390.png)
 
 - SVT
 
-![1540616585771](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616585771.png)
+![1540616585771](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616585771.png)
 
 - COCO-Text
 
-![1540616608741](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616608741.png)
+![1540616608741](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616608741.png)
 
 - NTU-UTOI
 
-![1540616649300](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616649300.png)
+![1540616649300](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616649300.png)
 
 - 在NTU-UTOI上fine-tune之后
 
-![1540616686781](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616686781.png)
+![1540616686781](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616686781.png)
 
 - 不同anchor的比较
 
-![1540616721198](Shitala Prasad——【ECCV2018】Using Object Information for Spotting Text.assets/1540616721198.png)
+![1540616721198](Shitala Prasad_ECCV2018】Using Object Information for Spotting Text.assets/1540616721198.png)
 
 ## 总结与收获
 
-这篇方法的idea很有意思。通过利用text背后的载体信息来帮助文字的定位，这个思想其实不是这篇文章首创，Yingli Tian——【CVPR2017】Unambiguous Text Localization and Retrieval for Cluttered Scenes这篇文章里其实有提过相似的思想。
+这篇方法的idea很有意思。通过利用text背后的载体信息来帮助文字的定位，这个思想其实不是这篇文章首创，Yingli Tian_CVPR2017】Unambiguous Text Localization and Retrieval for Cluttered Scenes这篇文章里其实有提过相似的思想。
 
 
 

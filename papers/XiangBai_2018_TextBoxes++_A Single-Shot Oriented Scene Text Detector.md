@@ -1,4 +1,4 @@
-# XiangBai——【TIP2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector
+# XiangBai_TIP2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector
 
 ## 作者和代码
 
@@ -25,7 +25,7 @@ Minghui Liao, Baoguang Shi, Xiang Bai, Senior Member, IEEE
 
 第二，回归损失除了增加oriented-text的位置regression loss，还增加了包含oriented-text的boundingBox（最小外接正矩形）的regression loss；
 
-![1539745975580](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539745975580.png)
+![1539745975580](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539745975580.png)
 
 
 
@@ -37,7 +37,7 @@ Minghui Liao, Baoguang Shi, Xiang Bai, Senior Member, IEEE
 
 
 
-![1539745223394](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539745223394.png)
+![1539745223394](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539745223394.png)
 
 Fig. 2: The architecture of TextBoxes++, a 29-layer fully convolutional network including 13 layers from VGG-16 followed by 10 extra convolutional layers, and 6 Text-box layers connected to 6 intermediate convolutional layers. Each location of a text-box layer predicts an n dimensional vector for each default box consisting of the text presence scores (2 dimensions), horizontal bounding rectangles offsets (4 dimensions), and rotated rectangle bounding box offsets (5 dimensions) or quadrilateral bounding box offsets (8 dimensions). A non-maximum suppression is applied during test phase to merge the results of all 6 text-box layers. Note that “#c” stands for the number of channels.    
 
@@ -45,19 +45,19 @@ Fig. 2: The architecture of TextBoxes++, a 29-layer fully convolutional network 
 
 （实际是水平的default box，以下为方便可视化后面预测的 $\{q\}$  or $\{r\}$ 故配图使用倾斜框）
 
-![1539747947586](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539747947586.png)
+![1539747947586](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539747947586.png)
 
 ##### 预测四边形和倾斜矩形
 
 下图Fig.3中，黄色实线框为oriented bounding boxes $\{q\}$  or $\{r\}$ ，绿色实线框为minimum horizontal bounding rectangles $\{b\}$，绿色虚线框为对应match的default box。
 
-![1539746261069](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539746261069.png)
+![1539746261069](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539746261069.png)
 
 Fig. 3: Illustration of the regression (red arrows) from a matched default box (green dashed) to a ground truth target quadrilateral (yellow) on a 3 × 3 grid. Note that the black dashed default box is not matched to the ground truth. The regression from the matched default box to the minimum horizontal rectangle (green solid) containing the ground truth quadrilateral is not shown for a better visualization.    
 
 predict的$\{b\} $，\{q\}$  ， $\{r\}$ 与default box的regression shift计算公式如下（下标为0表示是default box的相应值）
 
-![1539748115160](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539748115160.png)
+![1539748115160](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539748115160.png)
 
 ##### 其他细节点
 
@@ -65,7 +65,7 @@ predict的$\{b\} $，\{q\}$  ， $\{r\}$ 与default box的regression shift计算
 
 + vertical offset和textBoxes一样（竖直的step更小，更dense一些而已）
 
-  ![1539751802210](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539751802210.png)
+  ![1539751802210](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539751802210.png)
 
   Fig. 4: Vertical offsets of default boxes on a 3×3 grid. Black (resp. yellow) dashed bounding boxes are normal default boxes (resp. default boxes with vertical offsets). Note that only the default boxes of appropriate aspect ratio are shown for better visualization.    
 
@@ -75,9 +75,9 @@ predict的$\{b\} $，\{q\}$  ， $\{r\}$ 与default box的regression shift计算
 
   简单说，首先算出四个点的最外接正矩形$G_b = (b_1, b_2, b_3, b_4)$, 正矩形有top-left点的概念（最左上角点）。然后依次算出$G_q = (q_1, q_2, q_3, q_4)$的四个点和$G_b$的四个点的欧氏距离（都按顺时针或者逆时针方式连接点），求出使得欧氏距离和最小的时对应的$G_q$的点顺序即为最终四个点的关系（此时，第一个点可以认为是top-left点）。如下图所示，左图比右图距离和更小，故采用左图的点顺序关系。
 
-  ![1539754500339](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539754500339.png)
+  ![1539754500339](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539754500339.png)
 
-  ![1539752005058](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539752005058.png)
+  ![1539752005058](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539752005058.png)
 
 + 使用$(x, y, w, h, \theta)$还是$(x_1, y_1, x_2, y_2, h)$？
 
@@ -87,7 +87,7 @@ predict的$\{b\} $，\{q\}$  ， $\{r\}$ 与default box的regression shift计算
 
 + 在data augmentation时，除了用Jaccard overlap作为crop的标准外（小目标仅用IOU会导致小目标可能占了全图比例过大？），增加object overlap标准来判断是否crop。->个人认为，其实是增加一个指标/参数，控制目标在整张图中的比例不至于过大。
 
-  ![1539755194373](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755194373.png)
+  ![1539755194373](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755194373.png)
 
   Fig. 5: Data augmentation by random cropping based on Jaccard overlap (a-b) and object coverage constraints (c-d). Images in (b) and (d) are the corresponding resized crops.    
 
@@ -101,25 +101,25 @@ predict的$\{b\} $，\{q\}$  ， $\{r\}$ 与default box的regression shift计算
 
   $s_d = 0.6，s_r = 0.005$，使用指数更平滑，检测+识别取平均更好。
 
-  ![1539755410337](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755410337.png)
+  ![1539755410337](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755410337.png)
 
 ## 实验结果
 
 + ICDAR13
 
-  ![1539755575529](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755575529.png)
+  ![1539755575529](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755575529.png)
 
 + ICDAR15
 
-![1539755591283](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755591283.png)
+![1539755591283](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755591283.png)
 
 + COCO-Text
 
-![1539755605750](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755605750.png)
+![1539755605750](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755605750.png)
 
 + 速度
 
-  ![1539755649104](XiangBai——【2018】TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755649104.png)
+  ![1539755649104](XiangBai_2018_TextBoxes++_A Single-Shot Oriented Scene Text Detector.assets/1539755649104.png)
 
 ## 总结与收获
 

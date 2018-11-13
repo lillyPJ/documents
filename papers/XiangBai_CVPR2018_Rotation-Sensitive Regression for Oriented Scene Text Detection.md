@@ -1,8 +1,8 @@
-# XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection
+# XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection
 
 ## 作者和代码    
 
-![1540618569667](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618569667.png)
+![1540618569667](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618569667.png)
 
 [caffe代码](https://github.com/MhLiao/RRD)
 
@@ -18,7 +18,7 @@
 
   In contrast to regression, the classification of text presence should be rotation-invariant, i.e., text regions of arbitrary orientations should be classified as positive.    
 
-![1540618691845](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618691845.png)
+![1540618691845](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618691845.png)
 
 Figure 1: Visualization of feature maps and results of baseline and RRD. Red numbers are the classification scores. (b): the shared feature map for both regression and classification; (c): the result of shared feature; (d) and (e): the regression feature map and classification feature map of RRD; (f): the result of RRD.
 
@@ -36,7 +36,7 @@ Figure 1: Visualization of feature maps and results of baseline and RRD. Red num
 
 该网络结构由SSD改造，不同的是原来的多层融合侧边连接是普通的卷积，但这里换成了RSR。每一个RSR分为两个部分，第一部分是把卷积改成多种不同方向的oriented convolution。第二部分是用来做predicition，包括regression和classification两个分支。classification分支的不同地方在于多了一个oriented response pooling。
 
-![1540618746057](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618746057.png)
+![1540618746057](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618746057.png)
 
 Figure 2: Architecture of RRD. (a) The rotation-sensitive backbone follows the main architecture of SSD while changing its convolution into oriented response convolution. (b) The outputs of rotation-sensitive backbone are rotation-sensitive feature maps, followed by two branches: one for regression and another for classification based on oriented response pooling. Note that the inception block is optional.    
 
@@ -54,7 +54,7 @@ github链接：https://github.com/ZhouYanzhao/ORN
 
 简单说，就是把所有方向的结果逐像素取个最大值。如果文字是某个方向的，那么对应的方向的response应该比较大，这样就能把该方向的特征抽取出来（因为原来的feature有多个方向的，但只给定feature是不知道具体是哪个方向的，不能把它单独拿出来，用Max就可以不管是哪个方向都能提取出来）。
 
-![1540624844920](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540624844920.png)
+![1540624844920](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540624844920.png)
 
 The rotationsensitive feature maps are pooled along their depth axis.    
 
@@ -62,7 +62,7 @@ The rotationsensitive feature maps are pooled along their depth axis.
 
 使用四个顶点的四边形来表示。最后prediction的是四个点坐标的offset。
 
-![1540625144690](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540625144690.png)
+![1540625144690](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540625144690.png)
 
 ##### 训练
 
@@ -72,7 +72,7 @@ The rotationsensitive feature maps are pooled along their depth axis.
 
 + 损失函数 = 分类-2类softmax损失 + 回归-smooth_L1损失
 
-  ![1540625319598](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540625319598.png)
+  ![1540625319598](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540625319598.png)
 
 
 
@@ -88,29 +88,29 @@ The rotationsensitive feature maps are pooled along their depth axis.
 
 **Baseline+inc+rs+rotInvar**: the proposed RRD. Note that for word-based datasets, inception block is not applied and we also name it RRD.    
 
-![1540618866303](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618866303.png)
+![1540618866303](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618866303.png)
 
 - 在RCTW-17、ICDAR2015、MSRA-TD500上的实验结果
 
-![1540618935805](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618935805.png)
+![1540618935805](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618935805.png)
 
 + 不同IOU实验结果
 
-![1540618967244](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618967244.png)
+![1540618967244](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618967244.png)
 
 + ICDAR2013实验结果
 
-![1540618981236](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618981236.png)
+![1540618981236](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540618981236.png)
 
 + 在其他数据集（ship，HRSC2016）检测上结果
 
-![1540619071246](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540619071246.png)
+![1540619071246](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540619071246.png)
 
-![1540619088338](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540619088338.png)
+![1540619088338](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540619088338.png)
 
 + 当前文字检测结果中常见的歧义性
 
-![1540619107458](XiangBai——【CVPR2018】Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540619107458.png)
+![1540619107458](XiangBai_CVPR2018_Rotation-Sensitive Regression for Oriented Scene Text Detection.assets/1540619107458.png)
 
 ## 总结与收获
 

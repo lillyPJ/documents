@@ -1,8 +1,8 @@
-# Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector
+# Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector
 
 ## 作者    
 
-![1540619974140](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540619974140.png)
+![1540619974140](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540619974140.png)
 
 ## 关键词
 
@@ -23,7 +23,7 @@
 
 该网络框架是Faster RCNN。主要修改是图中的四个红色虚线框。
 
-![1540620266875](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620266875.png)
+![1540620266875](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620266875.png)
 
 Figure 1: The overall architecture of our FEN. It consists of three innovative components. 1, Feature Enhancement network stem with Feature Enhancement RPN (FE-RPN) and Hyper Feature Generation; 2, Positives mining; 3, Adaptively weighted position-sensitive RoI pooling.    
 
@@ -49,7 +49,7 @@ In HyperNet，feature maps originated from different intermediate layers have di
 
 利用对groundTruth做一些scale上的随机变换，以此来扩增正样本（利用的原理是：框在小范围内波动都可以视为正确的检测）
 
-![1540620304969](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620304969.png)
+![1540620304969](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620304969.png)
 
 
 
@@ -57,23 +57,23 @@ In HyperNet，feature maps originated from different intermediate layers have di
 
 原来只有1个$7*7$的池化，这种方形池化不适合文字这种长条形目标。所以又增加了$3*7，3*3$等多种池化方式，然后采用加权平均方式来算得到最终池化结果。 
 
-![1540620398307](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620398307.png)
+![1540620398307](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620398307.png)
 
-+ ![1540627325154](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627325154.png)
++ ![1540627325154](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627325154.png)
 
-![1540627339370](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627339370.png)
+![1540627339370](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627339370.png)
 
-![1540627356988](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627356988.png)
+![1540627356988](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627356988.png)
 
 Clearly, different pooling sizes are suitable for different text regions which own different spatial sizes and aspect-ratios, the most suitable pooling size will get the highest score.
 
-![1540627052798](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627052798.png)
+![1540627052798](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627052798.png)
 
-![1540627070732](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627070732.png)
+![1540627070732](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627070732.png)
 
 Moreover, with regard to bounding-box regression, we will share the evaluated adaptive weight and do it in the same way.
 
-![1540627154456](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627154456.png)
+![1540627154456](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540627154456.png)
 
 
 
@@ -83,17 +83,17 @@ Moreover, with regard to bounding-box regression, we will share the evaluated ad
 
 Table 1: The effectiveness of different components of our method on ICDAR 2011 and 2013 robust text detection datasets. IC13 Eval: ICDAR 2013 evaluation criterion; DetEval: (Wolf and Jolion 2006); R: recall; P: precision; F: F-measure. PM: Positives Mining. FENS: Feature Enhancement Network Stem. MT: multi-scale test.
 
-![1540620152648](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620152648.png)
+![1540620152648](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620152648.png)
 
 - ICDAR2011和ICDAR2013
 
 Table 2: Comparison with state-of-the-art methods on ICDAR 2011 and 2013 robust text detection datasets. IC13 Eval: ICDAR 2013 evaluation criterion; DetEval: (Wolf and Jolion 2006); R: recall; P: precision; F: F-measure. MT: multi-scale test.    
 
-![1540620190218](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620190218.png)
+![1540620190218](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620190218.png)
 
 - Positive Mining(PM)的有效性
 
-![1540620230245](Sheng Zhang——【AAAI2018】Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620230245.png)
+![1540620230245](Sheng Zhang_AAAI2018_Feature Enhancement Network_A Refined Scene Text Detector.assets/1540620230245.png)
 
 ## 总结与收获
 

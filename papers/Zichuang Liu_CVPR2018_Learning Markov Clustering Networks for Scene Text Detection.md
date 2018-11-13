@@ -1,4 +1,4 @@
-# Pan He——【ICCV2017】Single Shot Text Detector With Regional Attention
+# Lianwen Jin_CVPR2017_Deep Matching Prior Network_Toward Tighter Multi-oriented Text Detection
 
 ## 作者和代码    
 
