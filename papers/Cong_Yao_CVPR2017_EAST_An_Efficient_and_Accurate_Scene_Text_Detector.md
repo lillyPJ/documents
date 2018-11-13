@@ -2,7 +2,7 @@
 
 ## 作者和代码
 
-![1539763642802](C:\Users\linli1\AppData\Local\Temp\1539763642802.png)
+![1539763642802](Cong_Yao_CVPR2017_EAST_An_Efficient_and_Accurate_Scene_Text_Detector.assets/1539763642802.png)
 
 [非官方版tensorflow实现](https://github.com/argman/EAST)
 
